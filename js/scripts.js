@@ -1,8 +1,17 @@
 var beepBoop = function(number) {
 	var result = [];
 	for (var i=0; i <= number; i++) {
-		if (i === 1) {
+		// var numberString = i.toString
+		var digits = (i.toString()).split("");
+		flag = false;
+		for (var j=0; j <= digits.length; j++) {
+			if (digits[j] === "1") {
+				flag = true;
+			}
+		}
+		if (flag) {
 			result.push("boop");
+			flag = false;
 		}
 		else if (i === 0) {
 			result.push("beep");
