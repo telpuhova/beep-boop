@@ -1,4 +1,4 @@
-var beepBoop = function(number) {
+var beepBoop = function(number, reverse) {
 	var result = [];
 	for (var i=0; i <= number; i++) {
 		// var numberString = i.toString
@@ -27,6 +27,9 @@ var beepBoop = function(number) {
 			result.push("<span class='num'>" + i + "</span>");
 		}
 	}
+	if (reverse === "reverse") {
+		result.reverse();
+	}
 	return result.join(" ");
 }
 
@@ -43,11 +46,14 @@ var inputCheck = function(number) {
 $("document").ready(function() {
 	$("#formBeep").submit(function(event) {
 		event.preventDefault();
+
+		reverse = $("input:checkbox[name=reverse]:checked").val();
+
 		$("#result").empty();
 		$(".result").hide();
 		var number = $("#number").val();
 		if (inputCheck(number)) {
-			var result = beepBoop(number);
+			var result = beepBoop(number, reverse);
 			$("#result").append(result);
 			$(".result").fadeIn();
 		}

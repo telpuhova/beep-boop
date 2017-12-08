@@ -39,3 +39,7 @@ img {
 .num {
   color: red;
 }
+
+#checkbox {
+  margin-left: 20px;
+}
