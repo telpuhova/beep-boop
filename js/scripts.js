@@ -34,13 +34,26 @@ var beepBoop = function(number) {
 	return result;
 }
 
-
+var inputCheck = function(number) {
+	if (number.match(/[0-9]/)) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
 
 $("document").ready(function() {
 	$("#formBeep").submit(function(event) {
 		event.preventDefault();
 		var number = $("#number").val();
-		var result = beepBoop(number);
-		$(".result").text(result);
+		if (inputCheck(number)) {
+			var result = beepBoop(number);
+			$("#result").text(result);
+		}
+		else {
+			$("#result").text("please enter a number");
+		}
+
 	});
 });
