@@ -1,7 +1,6 @@
 var beepBoop = function(number, reverse, name) {
 	var result = [];
 	for (var i=0; i <= number; i++) {
-		// var numberString = i.toString
 		var digits = (i.toString()).split("");
 		flag1 = false;
 		flag0 = false;
