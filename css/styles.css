@@ -1,8 +1,6 @@
-/*body {
-  background-color: #161616;
-  color: #c9c9c9;
-}*/
-
+.result {
+  display: none;
+}
 
 body {
   background-color: #111111;
@@ -36,4 +34,8 @@ img {
 .column {
   float: left;
   width: 300px;
+}
+
+.num {
+  color: red;
 }

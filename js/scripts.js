@@ -21,10 +21,10 @@ var beepBoop = function(number) {
 			result.push("beep");
 		}
 		else if (i % 3 === 0) {
-			result.push("I'm sorry, Dave. I'm afraid I can't do that.");
+			result.push("<em>I'm sorry, Dave. I'm afraid I can't do that.</em>");
 		}
 		else {
-			result.push(i);
+			result.push("<span class='num'>" + i + "</span>");
 		}
 	}
 	return result.join(" ");
@@ -43,13 +43,17 @@ var inputCheck = function(number) {
 $("document").ready(function() {
 	$("#formBeep").submit(function(event) {
 		event.preventDefault();
+		$("#result").empty();
+		$(".result").hide();
 		var number = $("#number").val();
 		if (inputCheck(number)) {
 			var result = beepBoop(number);
-			$("#result").text(result);
+			$("#result").append(result);
+			$(".result").fadeIn();
 		}
 		else {
-			$("#result").text("please enter a number");
+			$("#result").append("<em>please enter a number</em>");
+			$(".result").fadeIn();
 		}
 
 	});
