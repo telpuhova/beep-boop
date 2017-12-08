@@ -43,3 +43,12 @@ img {
 #checkbox {
   margin-left: 20px;
 }
+
+input#name {
+  margin-left: 20px;
+}
+
+input#number {
+  margin-left: 5px;
+  margin-right: 5px;
+}
