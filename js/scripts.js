@@ -4,6 +4,9 @@ var beepBoop = function(number) {
 		if (i === 1) {
 			result.push("boop");
 		}
+		else if (i === 0) {
+			result.push("beep");
+		}
 		else {
 			result.push(i);
 		}
