@@ -31,7 +31,7 @@ var beepBoop = function(number) {
 			result.push(i);
 		}
 	}
-	return result;
+	return result.join(" ");
 }
 
 var inputCheck = function(number) {
@@ -42,6 +42,7 @@ var inputCheck = function(number) {
 		return false;
 	}
 }
+
 
 $("document").ready(function() {
 	$("#formBeep").submit(function(event) {
