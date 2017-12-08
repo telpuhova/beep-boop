@@ -11,10 +11,13 @@ _Web application that takes a number from a user and returns a range of numbers 
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| counting up to the provided number | 3 | [1, 2, 3] |
-| returning "boop" instead of 1 | 3 | ["boop", 2, 3] |
-| returning "beep" instead of 0 | 3 | ["boop", "beep", 3] |
-| returning "I'm sorry, Dave. I'm afraid I can't do that." instead of 3 | 3 | ["boop", "beep", "I'm sorry, Dave. I'm afraid I can't do that."] |
+| counting up to the provided number | 3 | [0, 1, 2, 3] |
+| returning "boop" instead of 1 | 3 | [0, "boop", 2, 3] |
+| returning "beep" instead of 0 | 3 | ["beep", "boop", 2, 3] |
+| returning "I'm sorry, Dave. I'm afraid I can't do that." instead of 3 | 3 | ["boop", "beep", 2, "I'm sorry, Dave. I'm afraid I can't do that."] |
+| returning "boop" instead of numbers that contain a 1 | 11 | ["boop", "beep", 2, "I'm sorry, Dave. I'm afraid I can't do that.", 4, 5, 6, 7, 8, 9, "boop", "boop"] |
+| returning "beep" instead of numbers that contain a 0 | 11 | ["boop", "beep", 2, "I'm sorry, Dave. I'm afraid I can't do that.", 4, 5, 6, 7, 8, 9, "boopbeep", "boop"] |
+| returning "I'm sorry, Dave. I'm afraid I can't do that." instead of numbers that contain a 3 | 13 | ["boop", "beep", 2, "I'm sorry, Dave. I'm afraid I can't do that.", 4, 5, 6, 7, 8, 9, "boopbeep", "boop", "boop", "I'm sorry, Dave. I'm afraid I can't do that."] |
 
 
 ## Setup
