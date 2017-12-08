@@ -1,4 +1,4 @@
-var beepBoop = function(number, reverse) {
+var beepBoop = function(number, reverse, name) {
 	var result = [];
 	for (var i=0; i <= number; i++) {
 		// var numberString = i.toString
@@ -21,7 +21,7 @@ var beepBoop = function(number, reverse) {
 			result.push("beep");
 		}
 		else if (i % 3 === 0) {
-			result.push("<em>I'm sorry, Dave. I'm afraid I can't do that.</em>");
+			result.push("<em>I'm sorry, " + name + ". I'm afraid I can't do that.</em>");
 		}
 		else {
 			result.push("<span class='num'>" + i + "</span>");
@@ -47,13 +47,15 @@ $("document").ready(function() {
 	$("#formBeep").submit(function(event) {
 		event.preventDefault();
 
-		reverse = $("input:checkbox[name=reverse]:checked").val();
-
 		$("#result").empty();
 		$(".result").hide();
+
+		var name = $("#name").val();
+		var reverse = $("input:checkbox[name=reverse]:checked").val();
 		var number = $("#number").val();
+
 		if (inputCheck(number)) {
-			var result = beepBoop(number, reverse);
+			var result = beepBoop(number, reverse, name);
 			$("#result").append(result);
 			$(".result").fadeIn();
 		}
