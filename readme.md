@@ -4,6 +4,8 @@
 
 #### By _**telpuhova**_
 
+https://telpuhova.github.io/beep-boop/
+
 ## Description
 
 _Web application that takes a number from a user and returns a range of numbers from 0 to the chosen number with the few exceptions._
