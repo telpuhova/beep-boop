@@ -1,14 +1,14 @@
-# _Beep boop_
+# Beep boop
 
-#### _beep boop website, 12/8/2017_
+beep boop website, 12/8/2017
 
-#### By _**telpuhova**_
+**By Natalia Telpukhova**
 
 https://telpuhova.github.io/beep-boop/
 
 ## Description
 
-_Web application that takes a number from a user and returns a range of numbers from 0 to the chosen number with the few exceptions._
+Web application that takes a number from a user and returns a range of numbers from 0 to the chosen number with the few exceptions.
 
 ### Specs
 | Spec | Input | Output |
@@ -24,11 +24,11 @@ _Web application that takes a number from a user and returns a range of numbers 
 
 ## Setup
 
-* _clone repository_
-* _open index.html in browser_
+* clone repository
+* open index.html in browser
 
 ## Technologies Used
 
-_HTML, CSS, JS, Bootstrap, jquery_
+HTML, CSS, JS, Bootstrap, jquery
 
-Copyright (c) 2017 **_telpuhova_**
+Copyright (c) 2017 Natalia Telpukhova
